@@ -24,11 +24,11 @@ __entry_point:
 	call print_string
 	mov edi, 0xb80a0
 	mov esi, string2
-	call blue_on_black
+	call green_on_black
 	call print_string
 	mov edi, 0xb8140
 	mov esi, string3
-	call blue_on_black
+	call green_on_black
 	call print_string
 	jmp short $
 
@@ -36,8 +36,8 @@ white_on_blue:
 	mov ah, 0x9f
 	ret
 
-blue_on_black:
-	mov ah, 0x09
+green_on_black:
+	mov ah, 0x0a
 	ret
 
 white_on_black:
