@@ -37,7 +37,7 @@ __entry_point:
 	jmp short $
 
 white_on_blue:
-	mov ah, 0x9f
+	mov ah, 0x1f
 	ret
 
 green_on_black:
