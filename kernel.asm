@@ -40,6 +40,9 @@ blue_on_black:
 	mov ah, 0x09
 	ret
 
+white_on_black:
+	mov ah, 0x0f
+	ret
 
 
 print_string:
