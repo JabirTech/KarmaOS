@@ -17,6 +17,10 @@ header:
 	dd __entry_point
 align 4, db 0
 
+%define VID_MEM 0xb8000
+%define CursX 0
+%define CursY 0
+
 __entry_point:
 	mov edi, 0xb8000
 	call white_on_blue
