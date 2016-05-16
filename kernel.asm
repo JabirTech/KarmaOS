@@ -34,6 +34,10 @@ __entry_point:
 	call lightbrown_on_black
 	mov esi, url
 	call print_string
+	mov edi, 0xb8280
+	call white_on_black
+	mov esi, info
+	call print_string
 	jmp short $
 
 white_on_blue:
@@ -69,6 +73,7 @@ string db 'Welcome to Karma operating system!',  0
 string2 db 'Designed and implemented by Jabir Project and Nano Foundation', 0
 string3 db 'Core developer: Muhammadreza Haghiri', 0
 url db 'Website: http://jabirproject.org', 0
+info db 'Operating system code and guides are available in our github repositories, for more information, check them out.', 0
 cursx db 0
 cursy db 0
 align 4, db 0
