@@ -18,30 +18,16 @@ header:
 align 4, db 0
 
 %define VID_MEM 0xb8000
+%define COLS 80
+%define LINES 25
+%define CHAR_ATTRIB 14
+
 _CursX db 0
 _CursY db 0
 
 __entry_point:
-	mov edi, 0xb8000
-	call white_on_blue
-	mov esi, string
-	call print_string
-	mov edi, 0xb80a0
-	mov esi, string2
-	call green_on_black
-	call print_string
-	mov edi, 0xb8140
-	mov esi, string3
-	call green_on_black
-	call print_string
-	mov edi, 0xb81e0
-	call lightbrown_on_black
-	mov esi, url
-	call print_string
-	mov edi, 0xb8280
-	call white_on_black
-	mov esi, info
-	call print_string
+	mov bl, 0x0a
+	call putc
 	jmp short $
 
 %include "./colors.asm"
