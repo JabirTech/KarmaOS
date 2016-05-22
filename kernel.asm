@@ -20,7 +20,7 @@ align 4, db 0
 %define VID_MEM 0xb8000
 %define COLS 80
 %define LINES 25
-%define CHAR_ATTRIB 14
+%define CHAR_ATTRIB 15
 
 _CursX db 0
 _CursY db 0
