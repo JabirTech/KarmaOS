@@ -18,8 +18,8 @@ header:
 align 4, db 0
 
 %define VID_MEM 0xb8000
-%define CursX 0
-%define CursY 0
+_CursX db 0
+_CursY db 0
 
 __entry_point:
 	mov edi, 0xb8000
