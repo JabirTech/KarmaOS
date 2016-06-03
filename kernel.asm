@@ -26,6 +26,7 @@ _CursX db 0
 _CursY db 0
 
 __entry_point:
+	call clrs
 	mov ebx, string
 	call puts
 	mov ebx, string2
@@ -34,6 +35,7 @@ __entry_point:
 	call puts
 	jmp short $
 
+%include "./screen.asm"
 %include "./colors.asm"
 %include "./string.asm"
 
