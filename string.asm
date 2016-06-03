@@ -28,3 +28,27 @@ putc:
 .Done:
 	popa
 	ret
+;-----------------------------
+;     Printing Strings
+;	    stored in ebx
+;-----------------------------
+
+puts:
+	pusha
+	push ebx
+	pop edi
+.Loop:
+	mov bl, byte [edi]
+	cmp bl, 0
+	je .Done
+	call putc
+.Next:
+	inc edi
+	jmp .Loop
+.Done:
+	mov bh, byte [_CursX]
+	mov bl, byte [_CursY]
+	;call MovCur
+	popa
+	ret
+	
