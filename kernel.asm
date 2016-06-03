@@ -33,6 +33,10 @@ __entry_point:
 	call puts
 	mov ebx, string3
 	call puts
+	mov ebx, url
+	call puts
+	mov ebx, info
+	call puts
 	jmp short $
 
 %include "./screen.asm"
@@ -43,11 +47,11 @@ __entry_point:
 
 
 
-string db 'Welcome to Karma operating system!',  0
-string2 db 'Designed and implemented by Jabir Project and Nano Foundation', 0
-string3 db 'Core developer: Muhammadreza Haghiri', 0
-url db 'Website: http://jabirproject.org', 0
-info db 'Operating system code and guides are available in our github repositories, for more information, check them out.', 0
+string db 'Welcome to Karma operating system!',  10, 0
+string2 db 'Designed and implemented by Jabir Project and Nano Foundation', 10, 0
+string3 db 'Core developer: Muhammadreza Haghiri', 10, 0
+url db 'Website: http://jabirproject.org', 10, 0
+info db 'Operating system code and guides are available in our github repositories, for more information, check them out.', 10, 0
 cursx db 0
 cursy db 0
 align 4, db 0
