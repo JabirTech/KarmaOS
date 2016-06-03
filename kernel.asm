@@ -26,28 +26,12 @@ _CursX db 0
 _CursY db 0
 
 __entry_point:
-	mov bl, 'H'
-	call putc
-	mov bl, 'e'
-	call putc
-	mov bl, 'l'
-	call putc
-	mov bl, 'l'
-	call putc
-	mov bl, 'o'
-	call putc
-	mov bl, 0x0a
-	call putc
-	mov bl, 'W'
-	call putc
-	mov bl, 'o'
-	call putc
-	mov bl, 'r'
-	call putc
-	mov bl, 'l'
-	call putc
-	mov bl, 'd'
-	call putc
+	mov ebx, string
+	call puts
+	mov ebx, string2
+	call puts
+	mov ebx, string3
+	call puts
 	jmp short $
 
 %include "./colors.asm"
