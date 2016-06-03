@@ -52,7 +52,6 @@ string2 db 'Designed and implemented by Jabir Project and Nano Foundation', 10, 
 string3 db 'Core developer: Muhammadreza Haghiri', 10, 0
 url db 'Website: http://jabirproject.org', 10, 0
 info db 'Operating system code and guides are available in our github repositories, for more information, check them out.', 10, 0
-cursx db 0
-cursy db 0
+
 align 4, db 0
 end_of_file:
