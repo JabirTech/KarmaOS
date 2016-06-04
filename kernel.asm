@@ -39,6 +39,7 @@ __entry_point:
 	call puts
 	jmp short $
 
+%include "./cursor.asm"
 %include "./screen.asm"
 %include "./colors.asm"
 %include "./string.asm"
