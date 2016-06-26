@@ -43,6 +43,7 @@ __entry_point:
 %include "./screen.asm"
 %include "./colors.asm"
 %include "./string.asm"
+%include "./kbd.asm"
 
 
 
